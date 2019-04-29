@@ -24,6 +24,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		C7CFAF98CBC51155645EE34A /* Pods_podPlay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF42C279EC212988483CBD3 /* Pods_podPlay_Tests.framework */; };
+		FEC76B182277511300880E49 /* libStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC76B172277511300880E49 /* libStaticLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,12 +62,13 @@
 		68E583AAA632CED07AB5CE2F /* Pods-podPlay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podPlay_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-podPlay_Example/Pods-podPlay_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9009939279CBC0CCEBEDCB3E /* podPlay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = podPlay.podspec; path = ../podPlay.podspec; sourceTree = "<group>"; };
+		9009939279CBC0CCEBEDCB3E /* podPlay.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = podPlay.podspec; path = ../podPlay.podspec; sourceTree = "<group>"; };
 		D6E548C6B026135216A8FA50 /* Pods_podPlay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_podPlay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA82423EDACFE22C76F9F539 /* Pods-podPlay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podPlay_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-podPlay_Example/Pods-podPlay_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E94F8B23E3338DBE90A99830 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E94F8B23E3338DBE90A99830 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F0257D42B7F7D857EF381AA7 /* Pods-podPlay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podPlay_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-podPlay_Tests/Pods-podPlay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F85F56C7BD5CA6136CE9B01C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F85F56C7BD5CA6136CE9B01C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FEC76B172277511300880E49 /* libStaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStaticLib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				FEC76B182277511300880E49 /* libStaticLib.a in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				6B71E774725DF78A104C10DD /* Pods_podPlay_Example.framework in Frameworks */,
@@ -132,6 +135,7 @@
 		6003F593195388D20070C39A /* Example for podPlay */ = {
 			isa = PBXGroup;
 			children = (
+				FEC76B172277511300880E49 /* libStaticLib.a */,
 				6003F59C195388D20070C39A /* TTAppDelegate.h */,
 				6003F59D195388D20070C39A /* TTAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -500,6 +504,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "podPlay/podPlay-Prefix.pch";
 				INFOPLIST_FILE = "podPlay/podPlay-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/podPlay",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,6 +523,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "podPlay/podPlay-Prefix.pch";
 				INFOPLIST_FILE = "podPlay/podPlay-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/podPlay",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

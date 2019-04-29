@@ -1,0 +1,16 @@
+PODS:
+  - podPlay (0.1.0)
+
+DEPENDENCIES:
+  - podPlay (from `../`)
+
+EXTERNAL SOURCES:
+  podPlay:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  podPlay: a2e6f907d3cf8598045a0cca9fbb432e7684ab6e
+
+PODFILE CHECKSUM: b943adb37094c5aca14bbaf5016fadcf393dd1e3
+
+COCOAPODS: 1.5.3

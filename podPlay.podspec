@@ -30,8 +30,11 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'podPlay/Classes/**/*'
-  
+  s.source_files = 'podPlay/Classes/*.{h,m}','podPlay/Classes/ThirdParty/*.{h,m}'
+  s.vendored_libraries  = 'podPlay/Classes/ThirdParty/*.{a}'
+s.frameworks = 'SystemConfiguration','CoreGraphics','CoreTelephony','Security','CoreLocation','JavaScriptCore'
+s.libraries  = 'iconv','sqlite3','stdc++','z'
+
   # s.resource_bundles = {
   #   'podPlay' => ['podPlay/Assets/*.png']
   # }

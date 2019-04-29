@@ -1,0 +1,40 @@
+{
+  "name": "podPlay",
+  "version": "0.1.0",
+  "summary": "A short description of podPlay.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/adolsai/podPlay",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "adolsai": "adolsai@126.com"
+  },
+  "source": {
+    "git": "https://github.com/adolsai/podPlay.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": [
+    "podPlay/Classes/*.{h,m}",
+    "podPlay/Classes/ThirdParty/*.{h,m}"
+  ],
+  "vendored_libraries": "podPlay/Classes/ThirdParty/*.{a}",
+  "frameworks": [
+    "SystemConfiguration",
+    "CoreGraphics",
+    "CoreTelephony",
+    "Security",
+    "CoreLocation",
+    "JavaScriptCore"
+  ],
+  "libraries": [
+    "iconv",
+    "sqlite3",
+    "stdc++",
+    "z"
+  ]
+}
